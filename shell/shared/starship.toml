@@ -1,18 +1,31 @@
-"$schema" = 'https://starship.rs/config-schema.json' 
+"$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
 
 format = '''
-$dotnet$nodejs$fill$time
-$directory$fill$git_state$git_branch$git_status
-[󰄾](bold green) '''
+$git_state$git_branch$git_status$fill$username$time
+$directory$fill$dotnet$nodejs$rust
+$cmd_duration[󰄾](bold green) '''
+
+[cmd_duration]
+format = "[$duration]($style) "
+min_time = 2000
 
 [directory]
 truncate_to_repo = true
-format = '[$read_only]($read_only_style)[$path]($style)' 
+format = '[$read_only]($read_only_style)[$path]($style)'
 
 [git_branch]
-format ="[$symbol$branch(:$remote_branch)]($style) "
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[dotnet]
+version_format = "v${major}.${minor}.${patch}"
+detect_files = [
+    "Directory.Build.props",
+    "Directory.Build.targets",
+    "Packages.props",
+]
+detect_extensions = ["csproj", "fsproj", "xproj", "sln", "slnx"]
 
 [git_status]
 conflicted = "󱐌"
@@ -27,4 +40,3 @@ symbol = " "
 disabled = false
 format = "[]($style) [$time]($style)"
 style = "italic bright-black"
-
