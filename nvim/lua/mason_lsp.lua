@@ -23,7 +23,7 @@ require("lsp-zero").extend_lspconfig({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { 'lua_ls', 'angularls' },
+	ensure_installed = { 'lua_ls', 'angularls', 'rust_analyzer' },
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({})
