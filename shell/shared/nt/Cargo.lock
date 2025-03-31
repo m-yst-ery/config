@@ -197,15 +197,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "exst"
-version = "0.1.0"
-dependencies = [
- "clap",
- "cli-clipboard",
- "symlink",
-]
-
-[[package]]
 name = "fastrand"
 version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -341,6 +332,15 @@ checksum = "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a"
 dependencies = [
  "memchr",
  "minimal-lexical",
+]
+
+[[package]]
+name = "nt"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "cli-clipboard",
+ "symlink",
 ]
 
 [[package]]
