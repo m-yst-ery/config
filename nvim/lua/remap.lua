@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>nt", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>w", "<C-w>")
 
 -- remove mapping for hjkl
 vim.keymap.set("n", "h", "<Nop>")
@@ -16,6 +16,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste replace (Visual mode)
 
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to os clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from os clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank to os clipboard" })
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Find and replace" })
